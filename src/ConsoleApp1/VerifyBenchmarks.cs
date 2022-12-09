@@ -13,7 +13,7 @@ namespace ConsoleApp1
     public class VerifyBenchmarks
     {
         private const string PHRASE  = "The Force is strong with you!";
-        private StringBuilder _sb = new StringBuilder();
+        private StringBuilder _sb = new();
 
         public VerifyBenchmarks()
         {
@@ -21,7 +21,7 @@ namespace ConsoleApp1
             _sb.Append($"[{DateTime.UtcNow}] [{Environment.CurrentManagedThreadId}] {PHRASE}");
 
         }
-
+        
         [Benchmark(Baseline = true)]
         public void Option1ToString()
         {
@@ -31,8 +31,8 @@ namespace ConsoleApp1
         [Benchmark]
         public void Option2CopyTo()
         {
-
             var option2Buffer = new char[128];
+            
             _sb.CopyTo(sourceIndex: 0,
                       destination: option2Buffer.AsSpan(),
                       count: _sb.Length);
