@@ -1,5 +1,7 @@
 # string-without-memory-allocations-dotnet
 
+[![.NET](https://github.com/fernandezja/string-without-memory-allocations-dotnet/actions/workflows/CI-dotnet.yml/badge.svg)](https://github.com/fernandezja/string-without-memory-allocations-dotnet/actions/workflows/CI-dotnet.yml)
+
 ### Benchmark summary .NET 6 (baseline) & .NET 7
 
 BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.22000.1281/21H2)
